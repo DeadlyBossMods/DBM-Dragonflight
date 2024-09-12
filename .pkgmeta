@@ -1,0 +1,5 @@
+package-as: DBM-Raids-Dragonflight
+
+move-folders:
+  DBM-Raids-Dragonflight/DBM-DragonIsles: DBM-DragonIsles
+  DBM-Raids-Dragonflight/DBM-Raids-Dragonflight: DBM-Raids-Dragonflight
