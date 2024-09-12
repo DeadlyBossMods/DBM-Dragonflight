@@ -26,6 +26,9 @@
 ## X-DBM-Mod-MapID: 2549, 2569, 2522
 ## X-DBM-Mod-MinCoreRevision: 20230617000000
 ## X-DBM-Mod-MinExpansion: 9
+## X-Curse-Project-ID: 1101373
+## X-Wago-ID: j6jzXW6R
+## Version: @project-version@
 
 localization.en.lua
 localization.kr.lua
