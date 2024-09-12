@@ -35,6 +35,7 @@ globals = {
 	"GROUP",
 	"NO",
 	"OVERVIEW",
+	"PLAYER",
 	"PLAYER_DIFFICULTY6",
 	"SCENARIO_STAGE",
 	"YES",
