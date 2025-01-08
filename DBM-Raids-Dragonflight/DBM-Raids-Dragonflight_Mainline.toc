@@ -1,6 +1,8 @@
 ## Interface: 110007, 110100
 ## X-Min-Interface: 100107
 ## Version: @project-version@
+## Category: DBM
+## Group: DBM Raids
 ## Title:|cffffe00a<|r|cffff7d0aDBM Mod|r|cffffe00a>|r |cffff6010Raids (DF)|r
 ## Title-koKR:|cffffe00a<|r|cffff7d0aDBM Mod|r|cffffe00a>|r |cffff6010공격대 (용군단)|r
 ## Title-zhTW:|cffffe00a<|r|cffff7d0aDBM Mod|r|cffffe00a>|r |cffff6010團隊副本-巨龍崛起|r
