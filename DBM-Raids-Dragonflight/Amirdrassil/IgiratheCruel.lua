@@ -132,7 +132,7 @@ function mod:SPELL_CAST_START(args)
 			timerBlisteringSpearCD:Start(30, self.vb.spearTotal+1)
 		elseif self.vb.tormentCount >= 1 then--Timers will follow sequence of event during active weapons basically
 			local timer = self:IsMythic() and blisteringMythicTimers[self.vb.spearCount+1] or self:IsHeroic() and blisteringHeroicTimers[self.vb.spearCount+1] or blisteringEasyTimers[self.vb.spearCount+1]
-			if timer then
+			if timer and timer > 0 then
 				timerBlisteringSpearCD:Start(timer, self.vb.spearTotal+1)
 			end
 		end

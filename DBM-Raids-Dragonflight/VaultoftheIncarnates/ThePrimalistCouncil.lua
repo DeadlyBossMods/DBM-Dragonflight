@@ -241,7 +241,7 @@ function mod:SPELL_CAST_START(args)
 		specWarnConductiveMarkSpread:Show()
 		specWarnConductiveMarkSpread:Play("range5")
 		local timer = self:GetFromTimersTable(allTimers, difficultyName, false, spellId, self.vb.markCast+1) or self:IsMythic() and 25 or self:IsHeroic() and 32.8 or self:IsEasy() and 41.2
-		if timer then
+		if timer and timer > 0 then
 			timerConductiveMarkCD:Start(timer, self.vb.markCast+1)
 		end
 	end

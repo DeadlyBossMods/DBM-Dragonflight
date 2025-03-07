@@ -133,7 +133,7 @@ function mod:SPELL_CAST_START(args)
 --		specWarnVolcanicDisgorge:Show(self.vb.volcanicCount)
 --		specWarnVolcanicDisgorge:Play("watchstep")
 		local timer = self:GetFromTimersTable(allTimers, false, false, spellId, self.vb.volcanicCount+1)
-		if timer then
+		if timer and timer > 0 then
 			timerVolcanicDisgorgeCD:Start(timer, self.vb.volcanicCount+1)
 		end
 --	elseif spellId == 420415 then
@@ -149,7 +149,7 @@ function mod:SPELL_CAST_START(args)
 			specWarnCataclysmJawsTaunt:Play("tauntboss")
 		end
 		local timer = self:GetFromTimersTable(allTimers, false, false, spellId, self.vb.jawsCount+1)
-		if timer then
+		if timer and timer > 0 then
 			timerCataclysmJawsCD:Start(timer, self.vb.jawsCount+1)
 		end
 	elseif spellId == 421703 then
@@ -164,7 +164,7 @@ function mod:SPELL_SUMMON(args)
 		specWarnScorchtailCrash:Show(self.vb.tailCount)
 		specWarnScorchtailCrash:Play("watchstep")
 		local timer = self:GetFromTimersTable(allTimers, false, false, spellId, self.vb.tailCount+1)
-		if timer then
+		if timer and timer > 0 then
 			timerScorchtailCrashCD:Start(timer, self.vb.tailCount+1)
 		end
 	end
