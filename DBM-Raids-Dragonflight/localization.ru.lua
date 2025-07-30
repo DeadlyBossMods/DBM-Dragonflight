@@ -119,7 +119,7 @@ L:SetTimerLocalization{
 }
 
 L:SetOptionLocalization({
-	timerGuardsandHuntsmanCD	= "Показывать таймеры для новых Охотников или Стражей, взбирающихся на стены"
+	timerGuardsandHuntsmanCD	= "Отсчет времени до новых Охотников или Стражей, взбирающихся на стены"
 })
 
 L:SetMiscLocalization({
@@ -175,9 +175,9 @@ L= DBM:GetModLocalization(2520)
 
 L:SetOptionLocalization({
 	InfoFrameBehaviorTwo	= "Установить режим мода для отслеживания стаков на инфофрейме",
-	OblivionOnly			= "Показывать только стаки Забвения (фазы 1, 2 и 3)",--По умолчанию
-	HowlOnly				= "Показывать только стаки Подавляющего воя (1-я фаза, в остальных случаях закрывается)",
-	Hybrid					= "Показывать стаки Подавляющего воя на 1-й фазе и стаки Забвения на фазах 2 и 3"
+	OblivionOnly			= "Показывать только стаки $spell:401951 (фазы 1, 2 и 3)",--По умолчанию
+	HowlOnly				= "Показывать только стаки $spell:401383 (1-я фаза, в остальных случаях закрывается)",
+	Hybrid					= "Показывать стаки $spell:401383 на 1-й фазе и стаки $spell:401951 на фазах 2 и 3"
 })
 
 L:SetMiscLocalization({
@@ -242,7 +242,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2556)
 
 L:SetMiscLocalization({
-	Threads			= "Потоки (%s)"
+	Threads			= "Нити (%s)"
 })
 
 ---------------------------
@@ -275,8 +275,8 @@ L:SetWarningLocalization{
 }
 
 L:SetOptionLocalization{
-	warnMythicDebuffs			= "Сообщать о наложении дебаффов $spell:428988 и $spell:428970 (со счетчиком)",
-	timerMythicDebuffs			= "Показать таймер (со счетчиком) для дебаффов $spell:428988 и $spell:428970"
+	warnMythicDebuffs			= "Показывать предупреждение о наложении дебаффов $spell:428988 и $spell:428970 (с подсчетом)",
+	timerMythicDebuffs			= "Отсчет времени (с подсчетом) до дебаффов $spell:428988 и $spell:428970"
 }
 
 -------------
