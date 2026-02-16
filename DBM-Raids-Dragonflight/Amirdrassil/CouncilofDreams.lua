@@ -273,8 +273,7 @@ function mod:OnCombatStart(delay)
 	self.vb.polyCount = 0
 	self.vb.polyIcon = 1
 	self.vb.windsCount = 0
-	self:EnablePrivateAuraSound(418589, "bombyou", 2)
-	self:EnablePrivateAuraSound(429123, "bombyou", 2, 418589)--Register secondary private aura (different ID for differentn difficulty?)
+	self:EnablePrivateAuraSound({418589,429123}, "bombyou", 2)
 	nextSpecial = GetTime() + (self:IsLFR() and 74.6 or 55.8)
 end
 
