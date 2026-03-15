@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2515, "DBM-DragonIsles", nil, 1205)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(193534)
 mod:SetEncounterID(2651)
 mod:SetReCombatTime(20)

@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2524, "DBM-Raids-Dragonflight", 2, 1208)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(199659)--Warlord Kagni
 mod:SetEncounterID(2682)
 mod:SetHotfixNoticeRev(20230619000000)

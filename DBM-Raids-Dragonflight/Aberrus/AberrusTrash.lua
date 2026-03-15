@@ -2,6 +2,7 @@ local mod	= DBM:NewMod("AberrusTrash", "DBM-Raids-Dragonflight", 2)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 --mod:SetModelID(47785)
 mod.isTrashMod = true
 

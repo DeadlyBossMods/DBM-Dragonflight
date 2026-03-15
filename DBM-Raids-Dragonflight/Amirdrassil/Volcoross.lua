@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2557, "DBM-Raids-Dragonflight", 1, 1207)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(208478)
 mod:SetEncounterID(2737)
 mod:SetUsedIcons(1, 2, 3, 4)
