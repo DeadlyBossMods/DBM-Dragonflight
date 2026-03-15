@@ -35,8 +35,6 @@ local timerDeepFreezeCD					= mod:NewAITimer(74.7, 389762, nil, nil, nil, 3)
 local timerBindingIceCD					= mod:NewAITimer(74.7, 389954, nil, nil, nil, 3, nil, DBM_COMMON_L.MAGIC_ICON)
 local timerChillingBreathCD				= mod:NewAITimer(9.7, 388925, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 
---mod:AddRangeFrameOption(5, 361632)
-
 function mod:OnCombatStart(delay, yellTriggered)
 --	if yellTriggered then
 

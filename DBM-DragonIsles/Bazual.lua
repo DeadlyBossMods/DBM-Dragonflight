@@ -44,8 +44,6 @@ local specWarnRainofDestruction			= mod:NewSpecialWarningSpell(390635, nil, nil,
 
 local timerRainofDestructionCD			= mod:NewAITimer(74.7, 390635, nil, nil, nil, 2)
 
---mod:AddRangeFrameOption(5, 361632)
-
 function mod:OnCombatStart(delay, yellTriggered)
 	self:SetStage(1)
 --	if yellTriggered then

@@ -63,7 +63,6 @@ local timerStokingtheFlamesCD			= mod:NewAITimer(22.1, 402887, nil, nil, nil, 3)
 local timerLavaGeyserCD					= mod:NewAITimer(22.1, 402985, nil, nil, nil, 3)
 local timerIncinerationCD				= mod:NewAITimer(22.1, 402983, nil, nil, nil, 3)
 
---mod:AddRangeFrameOption(5, 361632)
 mod:AddNamePlateOption("NPAuraOnRivalry", 407563)
 
 function mod:EnvelopingDarknessTarget(targetname, uId)
