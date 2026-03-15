@@ -41,9 +41,7 @@ function mod:OnCombatStart(delay, yellTriggered)
 --	if yellTriggered then
 
 --	end
---	if self.Options.RangeFrame then
---		DBM.RangeCheck:Hide()
---	end
+
 end
 
 --function mod:OnCombatEnd()

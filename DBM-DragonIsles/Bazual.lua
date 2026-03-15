@@ -53,9 +53,7 @@ function mod:OnCombatStart(delay, yellTriggered)
 		--timerMagmaEruptionCD:Start(1)
 		--timerLavaBreathCD:Start(1)
 --	end
---	if self.Options.RangeFrame then
---		DBM.RangeCheck:Hide()
---	end
+
 end
 
 --function mod:OnCombatEnd()

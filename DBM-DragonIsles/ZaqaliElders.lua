@@ -99,9 +99,7 @@ function mod:OnCombatStart(delay, yellTriggered)
 		--timerLavaGeyserCD:Start(1)
 		--timerIncinerationCD:Start(1)
 --	end
---	if self.Options.RangeFrame then
---		DBM.RangeCheck:Hide()
---	end
+
 	if self.Options.NPAuraOnRivalry then
 		DBM:FireEvent("BossMod_EnableHostileNameplates")
 	end

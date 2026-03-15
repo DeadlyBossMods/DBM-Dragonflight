@@ -36,21 +36,14 @@ local timerArcExpulsionCD				= mod:NewAITimer(31.3, 389951, nil, nil, nil, 3)--M
 local timerThunderVortexCD				= mod:NewCDTimer(6.8, 385980, nil, nil, nil, 3)
 --local timerDeterrentStrikeCD			= mod:NewAITimer(9.7, 361387, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 
-mod:AddRangeFrameOption(10, 387265)
 
 function mod:OnCombatStart(delay, yellTriggered)
 --	if yellTriggered then
 
 --	end
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Show(10)
-	end
 end
 
 function mod:OnCombatEnd()
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
-	end
 end
 
 function mod:SPELL_CAST_START(args)

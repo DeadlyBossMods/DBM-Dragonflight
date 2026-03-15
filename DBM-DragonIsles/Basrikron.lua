@@ -35,9 +35,7 @@ function mod:OnCombatStart(delay, yellTriggered)
 		--timerFracturingTremorCD:Start(1-delay)
 		--timerShaleBreathCD:Start(1-delay)
 --	end
---	if self.Options.RangeFrame then
---		DBM.RangeCheck:Hide()
---	end
+
 end
 
 --function mod:OnCombatEnd()
