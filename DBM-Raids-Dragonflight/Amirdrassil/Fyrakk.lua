@@ -65,9 +65,9 @@ local timerBlazeCD									= mod:NewCDCountTimer(49, 414186, nil, nil, nil, 3)
 local timeAFlameCD									= mod:NewCDCountTimer(49, 417807, nil, "RemoveMagic", 2, 5, nil, DBM_COMMON_L.MAGIC_ICON)
 local timerFyralathsBiteCD							= mod:NewCDCountTimer(49, 417431, DBM_COMMON_L.FRONTAL.." (%s)", nil, 2, 5, nil, DBM_COMMON_L.TANK_ICON)
 
-mod:AddPrivateAuraSoundOption(419060, true, 419506, 1)--Firestorm
-mod:AddPrivateAuraSoundOption(426370, true, 426370, 1)--Darkflame Cleave
-mod:AddPrivateAuraSoundOption(414187, true, 414186, 1)--Blaze
+mod:AddPrivateAuraSoundOption(419060, true, 419506, 1, 1, "runout", 2)--Firestorm
+mod:AddPrivateAuraSoundOption(426370, true, 426370, 1, 1, "gathershare", 2)--Darkflame Cleave
+mod:AddPrivateAuraSoundOption({414187,421825,421826,421827,421828,421829}, true, 414186, 1, 1, "lineyou", 17)--Blaze
 --Intermission: Amirdrassil in Peril
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(26667))
 local warnShadowflameOrbs							= mod:NewCountAnnounce(421937, 2)
@@ -108,9 +108,9 @@ local timerMythicDebuffs							= mod:NewTimer(45, "timerMythicDebuffs", 428970, 
 local timerFlamefallCD								= mod:NewCDCountTimer(49, 419123, nil, nil, nil, 2)
 local timerShadowflameDevastationCD					= mod:NewCDCountTimer(49, 422524, 406227, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
 
-mod:AddPrivateAuraSoundOption(422520, true, 422518, 1)--Greater Firestorm
-mod:AddPrivateAuraSoundOption(428988, true, 428971, 1)--Molten Eruption
-mod:AddPrivateAuraSoundOption(428970, true, 428968, 1)--Shadow Cage
+mod:AddPrivateAuraSoundOption(422520, true, 422518, 1, 1, "runout", 2)--Greater Firestorm
+mod:AddPrivateAuraSoundOption(428988, true, 428971, 1, 1, "flameyou", 15)--Molten Eruption
+mod:AddPrivateAuraSoundOption(428970, true, 428968, 1, 1, "shadowyou", 15)--Shadow Cage
 --Stage Three: Shadowflame Incarnate
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(26670))
 local warnBloom										= mod:NewYouAnnounce(423717, 1)
@@ -128,9 +128,9 @@ local timerEternalFirestormCD						= mod:NewCDCountTimer(41, 422935, 419506, nil
 local timerEternalFirestormSwirlCD					= mod:NewCDCountTimer(41, 402736, 143413, nil, nil, 3)--short name "Swirl"
 local timerCorruptedSeedsCD							= mod:NewCDCountTimer(41, 430048, nil, nil, nil, 5, nil, DBM_COMMON_L.MYTHIC_ICON)
 
-mod:AddPrivateAuraSoundOption(423601, true, 423601, 1)--Seed of Amirdrassil
-mod:AddPrivateAuraSoundOption(430048, true, 430048, 1)--Corrupted Seed
-mod:AddPrivateAuraSoundOption(425525, true, 422935, 1)--Eternal Firestorm
+mod:AddPrivateAuraSoundOption(423601, true, 423601, 1, 1, "seedyou", 15)--Seed of Amirdrassil
+mod:AddPrivateAuraSoundOption(430048, true, 430048, 1, 1, "seedyou", 15)--Corrupted Seed
+mod:AddPrivateAuraSoundOption(425525, true, 422935, 1, 1, "runout", 2)--Eternal Firestorm
 
 mod.vb.darkflameCleaveCount = 0
 mod.vb.firestormCount = 0--reused for empowered version
@@ -271,18 +271,9 @@ function mod:OnCombatStart(delay)
 
 	--Hopefully the API doesn't mind registering 16 private auras at same time on pull
 	--It's not DBMs fault designers got carried away :D
-	self:EnablePrivateAuraSound(419060, "runout", 2)--Firestorm
-	self:EnablePrivateAuraSound({414187,421825,421826,421827,421828,421829}, "lineyou", 17)--Blaze
-	self:EnablePrivateAuraSound(422520, "runout", 2)--Greater Firestorm
-	self:EnablePrivateAuraSound(423601, "seedyou", 15)--Seed of Amirdrassil
-	self:EnablePrivateAuraSound(430048, "seedyou", 15)--Corrupted Seed
-	self:EnablePrivateAuraSound(425525, "runout", 2)--Eternal Firestorm
 	if self:IsMythic() then
-		self:EnablePrivateAuraSound(426370, "gathershare", 2)--Darkflame Cleave
 --		self:EnablePrivateAuraSound(429903, "flameyou", 15)--Flamebound
 --		self:EnablePrivateAuraSound(429906, "shadowyou", 15)--Shadowbound
-		self:EnablePrivateAuraSound(428988, "flameyou", 15)--Molten Eruption (because both molten and shadow are bombs, can't just use bombyou for both, so better to elemental asign)
-		self:EnablePrivateAuraSound(428970, "shadowyou", 15)--Shadow Cage (because both molten and shadow are bombs, can't just use bombyou for both, so better to elemental asign)
 		timerWildFireCD:Start(4, 1)
 		timerDarkflameShadesCD:Start(6.4, 1)--Bite minus 2.5
 		timeAFlameCD:Start(7.9, 1)

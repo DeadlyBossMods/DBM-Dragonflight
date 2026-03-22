@@ -64,7 +64,7 @@ local timerOverheatedCD								= mod:NewCDCountTimer(29.9, 421455, nil, nil, nil
 local timerLavaGeysersCD							= mod:NewCDCountTimer(25.9, 422691, nil, nil, nil, 3)
 local timerSeekingInfernoCD							= mod:NewCDCountTimer(21.9, 425885, nil, nil, nil, 3, nil, DBM_COMMON_L.MYTHIC_ICON)
 
-mod:AddPrivateAuraSoundOption(426010, true, 425885, 4)--Seeking Inferno
+mod:AddPrivateAuraSoundOption(426010, true, 425885, 4, 1, "justrun", 2)--Seeking Inferno
 --Stage Two: World In Flames
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(27649))
 local warnDevourEssence								= mod:NewCountAnnounce(422277, 3)
@@ -102,7 +102,6 @@ function mod:OnCombatStart(delay)
 	timerLavaGeysersCD:Start(self:IsMythic() and 24 or 26.9-delay, 1)
 	timerPhaseCD:Start(62.7-delay, 2)--62-64.9. Basically phase/world in flames timer
 	if self:IsMythic() then
-		self:EnablePrivateAuraSound(426010, "justrun", 2)
 		timerSeekingInfernoCD:Start(26-delay, 1)
 	end
 end

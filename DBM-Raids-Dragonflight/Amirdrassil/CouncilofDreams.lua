@@ -91,7 +91,7 @@ local timerSongoftheDragon							= mod:NewBuffActiveTimer(20, 421029, nil, nil, 
 local timerPolymorphBombCD							= mod:NewCDCountTimer(18.9, 418720, L.Ducks, nil, nil, 3)--Ducks already has count in mod localization
 local timerEmeraldWindsCD							= mod:NewCDCountTimer(11.8, 421024, DBM_COMMON_L.PUSHBACK.." (%s)", nil, nil, 2)
 
-mod:AddPrivateAuraSoundOption(418589, true, 418720, 1)--Polymorph Bomb
+mod:AddPrivateAuraSoundOption({418589,429123}, true, 418720, 1, 1, "bombyou", 2)--Polymorph Bomb
 --mod:AddInfoFrameOption(407919, true)
 mod:AddSetIconOption("SetIconOnPoly", 418720, true, 0, {1, 2, 3, 4})
 
@@ -274,7 +274,6 @@ function mod:OnCombatStart(delay)
 	self.vb.polyCount = 0
 	self.vb.polyIcon = 1
 	self.vb.windsCount = 0
-	self:EnablePrivateAuraSound({418589,429123}, "bombyou", 2)
 	nextSpecial = GetTime() + (self:IsLFR() and 74.6 or 55.8)
 end
 

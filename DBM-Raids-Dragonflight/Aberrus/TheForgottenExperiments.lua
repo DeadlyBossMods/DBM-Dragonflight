@@ -55,7 +55,7 @@ local timerRendingChargeCD							= mod:NewCDCountTimer(34.2, 406358, nil, nil, n
 local timerMassiveSlamCD							= mod:NewCDCountTimer(39, 404472, nil, nil, nil, 3)
 local timerBellowingRoarCD							= mod:NewCDCountTimer(23.1, 404713, nil, nil, nil, 2)
 
-mod:AddPrivateAuraSoundOption(406317, true, 406358, 1)
+mod:AddPrivateAuraSoundOption(406317, true, 406358, 1, 1, "targetyou", 2)
 --Thadrion
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(26322))
 local warnUnstableEssence							= mod:NewCastAnnounce(407327, 3)
@@ -164,7 +164,6 @@ function mod:OnCombatStart(delay)
 	self.vb.breathCount = 0
 	self.vb.disintegrateCount = 0
 	self.vb.anomalyCount = 0
-	self:EnablePrivateAuraSound(406317, "targetyou", 2)--Rending Charge
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:SetHeader(DBM:GetSpellName(406313))
 		DBM.InfoFrame:Show(5, "function", updateInfoFrame, false, true)

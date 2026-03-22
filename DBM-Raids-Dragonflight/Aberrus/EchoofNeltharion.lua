@@ -64,8 +64,8 @@ local timerRushingDarknessCD					= mod:NewCDCountTimer(36.3, 407221, nil, nil, n
 local timerCalamitousStrikeCD					= mod:NewCDCountTimer(36.3, 401998, nil, "Tank|Healer", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 --local berserkTimer							= mod:NewBerserkTimer(600)
 
-mod:AddPrivateAuraSoundOption(407182, true, 407221, 1)--Rushing Darkness
-mod:AddPrivateAuraSoundOption(410966, true, 410953, 3)--Volcanic Heart
+mod:AddPrivateAuraSoundOption(407182, true, 407221, 1, nil, "targetyou", 2)--Rushing Darkness
+mod:AddPrivateAuraSoundOption(410966, true, 410953, 3, nil, "runout", 2)--Volcanic Heart
 --mod:AddSetIconOption("SetIconOnVolcanicHeart", 410953, true, 0, {1, 2, 3})
 mod:AddSetIconOption("SetIconOnRushingDarkness", 407221, true, 0, {6})
 --mod:AddNamePlateOption("NPAuraOnAscension", 385541)
@@ -183,8 +183,6 @@ function mod:OnCombatStart(delay)
 	timerVolcanicHeartCD:Start(15.6-delay, 1)
 	timerCalamitousStrikeCD:Start(self:IsMythic() and 25.1 or 24.1-delay, 1)--Delayed by extra wall on mythic
 	timerEchoingFissureCD:Start(33.6-delay, 1)
-	self:EnablePrivateAuraSound(407182, "targetyou", 2)--Rushing Darkness
-	self:EnablePrivateAuraSound(410966, "runout", 2)--Volcanic Heart
 end
 
 function mod:OnCombatEnd()
