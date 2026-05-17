@@ -94,10 +94,10 @@ local timerIonizingChargeCD						= mod:NewCDNPTimer(10, 375630, nil, nil, nil, 3
 
 --mod:AddInfoFrameOption(361651, true)
 mod:AddNamePlateOption("NPFixate", 376330, true)
-mod:AddSetIconOption("SetIconOnMages", "ej25144", true, 5, {6, 5, 4})
-mod:AddSetIconOption("SetIconOnStormbringers", "ej25139", true, 5, {8, 7})
+mod:AddSetIconOption("SetIconOnMages", -25144, true, 5, {6, 5, 4})
+mod:AddSetIconOption("SetIconOnStormbringers", -25139, true, 5, {8, 7})
 
-mod:GroupSpells(385618, "ej25144", "ej25139")--Icon Marking with general adds announce
+mod:GroupSpells(385618, -25144, -25139)--Icon Marking with general adds announce
 --Stage Two: A Broodkeeper Scorned
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(25146))
 local warnBroodkeepersFury						= mod:NewStackAnnounce(375879, 2)

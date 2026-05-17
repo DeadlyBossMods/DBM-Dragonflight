@@ -64,7 +64,7 @@ local specWarnAerialSlash						= mod:NewSpecialWarningDefensive(385812, nil, nil
 local timerAerialSlashCD						= mod:NewCDNPTimer(11.7, 385812, nil, "Tank|Healer", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 local timerDivertedEssenceCD					= mod:NewCDNPTimer(13.4, 387943, nil, nil, nil, 4, nil, DBM_COMMON_L.INTERRUPT_ICON)--13.4-15.8. Variance caused by interrupt timing. 13.4 if you kick instantly, 15.8 if you kick at last moment, it's basically 13.4 + cast time
 
-mod:AddSetIconOption("SetIconOnVolatileInfuser", "ej25903", true, 5, {8, 7, 6, 5, 4})
+mod:AddSetIconOption("SetIconOnVolatileInfuser", -25903, true, 5, {8, 7, 6, 5, 4})
 --Thunder Caller
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(25958))
 local specWarnStormBolt							= mod:NewSpecialWarningInterruptCount(384273, false, nil, nil, 1, 2)
