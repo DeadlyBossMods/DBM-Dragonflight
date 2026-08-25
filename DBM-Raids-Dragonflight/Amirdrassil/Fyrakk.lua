@@ -125,7 +125,7 @@ mod:AddAuraSoundOption(428970, true, 428968, 1, 1, "shadowyou", 15)--Shadow Cage
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(26670))
 local warnBloom										= mod:NewYouAnnounce(423717, 1)
 local warnInfernalMaw								= mod:NewStackAnnounce(425492, 3, nil, "Tank|Healer")
-local warnEternalFirestorm							= mod:NewCountAnnounce(422935, 4)
+local warnEternalFirestorm							= mod:NewCountAnnounce(422935, 4, nil, nil, 80066)--Short name "Tornado"
 local warnEternalFirestormSwirl						= mod:NewCountAnnounce(402736, 3)--Short name "Swirl" 143413
 
 local specWarnApocalypseRoar						= mod:NewSpecialWarningCount(422837, nil, nil, nil, 2, 13, nil, nil, "pushbackincoming")
