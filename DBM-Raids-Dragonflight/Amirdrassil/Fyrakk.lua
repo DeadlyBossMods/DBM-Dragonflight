@@ -172,7 +172,7 @@ local allTimers = {
 	},
 	[2] = {--Same in all difficulties, minus Aflame
 		--Flamefall
-		[420422] = {5.8, 75, 79.9},
+		[419123] = {5.8, 75, 79.9},
 		--Fyr'alath's Bite
 		[417431] = {17.9, 11.0, 60.0, 11.0, 11.0, 58.0, 11.0, 11.0},
 		--Greater Firestorm
@@ -500,7 +500,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 				timerBlazeCD:Start(12, 1)--Heroic/Mythic only
 				self:Schedule(12, blazeLoop, self)
 				if self:IsMythic() then
-					timerEternalFirestormCD:Start(3.8, 1)
+					timerEternalFirestormSwirlCD:Start(3.8, 1)
 					self:Schedule(3.8, eternalFireSwirlLoop, self)
 				end
 			end
